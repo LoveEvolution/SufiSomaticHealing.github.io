@@ -137,7 +137,25 @@
             <div class="container">
                 <h2 class="fade-in">Get in Touch</h2>
                 <p class="section-description fade-in delay-1">Connect with me on social media or send a direct message.</p>
-                <div class="contact-social-links fade-in delay-2">
+                <div class="contact-form-container fade-in delay-2">
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        
+                    </form>
+                </div>
+                <div class="contact-social-links fade-in delay-3">
                     <!-- https://instagram.com/[yourusername] -->
                     <a href="https://instagram.com/SufiSomaticHealing" target="_blank" aria-label="Instagram">
                         <img src="https://img.icons8.com/ios-filled/50/4CAF50/instagram-new--v1.png" alt="Instagram">

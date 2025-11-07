@@ -180,7 +180,7 @@ p.section-description {
     font-size: 4.5em;
     margin-bottom: 25px;
     margin-top: 30px;
-    color: white;
+    color: var(--primary-color);
     line-height: 1.1;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
@@ -188,7 +188,7 @@ p.section-description {
 .hero-section h3 {
     font-size: 1.80em;
     margin-bottom:70px;
-    color: rgb(214, 212, 212);
+    color: var(--secondary-color);
     line-height: 1.1;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
@@ -507,11 +507,64 @@ p.section-description {
     text-decoration: none;
 }
 
-/* Contact Section */
-.contact-section {
-    background-color: var(--background-color);
-    text-align: center;
+/* Contact Section - Form Styles */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0px auto 70px auto; /* Centered, with margin at the top */
+    background-color: var(--light-bg-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
+
+.contact-form .form-group {
+    margin-bottom: 25px;
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1em;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.2); /* Soft focus ring with primary color */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 120px;
+}
+
+.contact-form .btn-primary { /* Style the submit button to match existing buttons */
+    width: auto;
+    display: block;
+    margin: 30px auto 0 auto; /* Center the button below the form */
+    padding: 15px 40px;
+    font-size: 1.2em;
+}
+
 
 .contact-social-links {
     display: flex;
@@ -535,6 +588,7 @@ p.section-description {
     width: 50px;
     height: 50px;
 }
+
 
 /* Footer */
 .footer {
